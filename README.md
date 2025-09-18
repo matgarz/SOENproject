@@ -6,8 +6,6 @@ This project is to implement a Campus Events & Ticketing web application designe
 
 This project is to be developed using Agile Development methods over four sprints, spanning ten weeks total. The final deliverable consists of a prototype demonstrating the core functionality and workflows.
 
-allowing the university students in the city to discover, register for and attend various events. The website is easy to use with the help of QR Codes. 
-
 # Project Features 
 
 # Team Members
