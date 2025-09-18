@@ -1,6 +1,14 @@
 # SOENproject
 
 # Project Summary
+This project is to implement a Campus Events & Ticketing web application designed for three groups of users each with different roles, permissions, and features. The application provides an easy way for students to browse events and attend events, the organizers can create and manage their events, while the administrators can monitor and moderate the platform.
+
+This project is to be developed using Agile Development methods over four sprints, spanning ten weeks total. The final deliverable consists of a prototype demonstrating the core functionality and workflows.
+
+## Students
+Students are able to browse various events, register for them and attend with ease. 
+
+allowing the university students in the city to discover, register for and attend various events. The website is easy to use with the help of QR Codes. 
 
 # Project Features 
 
