@@ -15,6 +15,17 @@
 - Jasdeep Sandhu<br>
 
 # Language and Frameworks
+## Languages Used:
+- Javascript
+- SQL
+- HTML/CSS
+- Other languages
+
+## Frameworks & Tools used:
+- React
+- Node.JS (Express.JS)
+- Postgresql
+- Supabase
 
 # For the User
 
