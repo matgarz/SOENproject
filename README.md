@@ -6,7 +6,7 @@
 hello
 
 # Team Members
-Ariberto Bello Veras
+Ariberto Bello Veras;
 Romain Corbel
 Mateo Garzon Velasco
 Jonathan Lebeau Lemieux
