@@ -13,14 +13,14 @@ allowing the university students in the city to discover, register for and atten
 # Project Features 
 
 # Team Members
-- Ariberto Bello Veras 40319600<br>
-- Romain Corbel 40257534 roma4in1<br>
-- Mateo Garzon Velasco Matgarz<br>
-- Jonathan Lebeau Lemieux 40251138 BandoJo<br>
+- Ariberto Bello Veras (40319600)<br>
+- Romain Corbel (40257534 @roma4in1)<br>
+- Mateo Garzon Velasco (@Matgarz)<br>
+- Jonathan Lebeau Lemieux (40251138 @BandoJo)<br>
 - Karim Mikhaeil<br>
-- Protip Nag 40308526 Protip9<br>
+- Protip Nag (40308526 @Protip9)<br>
 - Tristan Ovesson<br>
-- Jasdeep Sandhu<br>
+- Jasdeep Sandhu (40266557 @jasdeep-s-s)<br>
 
 # Language and Frameworks
 ## Languages Used:
