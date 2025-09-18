@@ -7,13 +7,13 @@ hello
 
 # Team Members
 Ariberto Bello Veras<br>
-Romain Corbel
-Mateo Garzon Velasco
-Jonathan Lebeau Lemieux
-Karim Mikhaeil
-Protip Nag
-Tristan Ovesson
-Jasdeep Sandhu
+Romain Corbel<br>
+Mateo Garzon Velasco<br>
+Jonathan Lebeau Lemieux<br>
+Karim Mikhaeil<br>
+Protip Nag<br>
+Tristan Ovesson<br>
+Jasdeep Sandhu<br>
 
 # Language and Frameworks
 
