@@ -3,7 +3,6 @@
 # Project Summary
 
 # Project Features 
-hello
 
 # Team Members
 Ariberto Bello Veras<br>
