@@ -15,7 +15,7 @@ This project is to be developed using Agile Development methods over four sprint
 - Jonathan Lebeau Lemieux (40251138 @BandoJo)<br>
 - Karim Mikhaeil (40233685 Karimikhaeil)<br>
 - Protip Nag (40308526 @Protip9)<br>
-- Tristan Ovesson ()<br>
+- Tristan Ovesson (RastaLink)<br>
 - Jasdeep Sandhu (40266557 @jasdeep-s-s)<br>
 
 # Language and Frameworks
