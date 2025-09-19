@@ -11,11 +11,11 @@ This project is to be developed using Agile Development methods over four sprint
 # Team Members
 - Ariberto Bello Veras (40319600)<br>
 - Romain Corbel (40257534 @roma4in1)<br>
-- Mateo Garzon Velasco (@Matgarz)<br>
+- Mateo Garzon Velasco (40277001@Matgarz)<br>
 - Jonathan Lebeau Lemieux (40251138 @BandoJo)<br>
-- Karim Mikhaeil<br>
+- Karim Mikhaeil (40233685 Karimikhaeil)<br>
 - Protip Nag (40308526 @Protip9)<br>
-- Tristan Ovesson<br>
+- Tristan Ovesson ()<br>
 - Jasdeep Sandhu (40266557 @jasdeep-s-s)<br>
 
 # Language and Frameworks
