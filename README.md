@@ -7,7 +7,20 @@ This project is to implement a Campus Events & Ticketing web application designe
 This project is to be developed using Agile Development methods over four sprints, spanning ten weeks total. The final deliverable consists of a prototype demonstrating the core functionality and workflows.
 
 # Project Features 
-
+  -User Account Creation
+  -User Event Feed
+  -User Personal Calendar
+  -Student Ticket Wallet
+  -Student Event Search Engine
+  -Organizer Event Creation
+  -Organizer QRcode Ticket Validation
+  -Organizer attendance tracking
+  -Organizer Event Dashboard Analytics
+  -Organizer CSV attendance file export 
+  -Admin Account Management
+  -Admin Policy Enforcement
+  -Admin Global Stats 
+  
 # Team Members
 - Ariberto Bello Veras (40319600)<br>
 - Romain Corbel (40257534 @roma4in1)<br>
@@ -31,5 +44,9 @@ This project is to be developed using Agile Development methods over four sprint
 - Postgresql
 - Supabase
 
-# For the User
-
+## For the User
+  -You can be a student, organizer or administrator
+  -As a student access to a personal calendar for events, personal wallet for tickets, a personal feed and a search engine
+  -As an organizer you will have access to event creation/management, ticket verification tools, attendance tracking, and a dashboard for event analytics
+  -As an administrator you will have manage accounts, assign roles, moderate events for compliance and have access to global event stats
+  
