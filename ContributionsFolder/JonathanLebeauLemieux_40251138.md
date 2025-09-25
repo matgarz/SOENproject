@@ -1,4 +1,4 @@
-#Sprint 1
+# Sprint 1
 
 September 11th, 2025:
 
