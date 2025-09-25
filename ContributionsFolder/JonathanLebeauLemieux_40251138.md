@@ -21,6 +21,6 @@ September 19 - September 25: ~120 minutes
 - Verify task breakdown for user stories are all assigned to team members.
 - Ensure meeting minutes are consistent and accurate.
 
-Total time spent: 235 minutes (~3 hours 55 minutes)
+Total time spent during Sprint #1: 235 minutes (~3 hours 55 minutes)
 
 
