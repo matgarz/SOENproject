@@ -23,13 +23,21 @@ This project is to be developed using Agile Development methods over four sprint
   
 # Team Members
 - Ariberto Bello Veras (40319600 @Aribertobello)<br>
+Role: <br>
 - Romain Corbel (40257534 @roma4in1)<br>
+Role: <br>
 - Mateo Garzon Velasco (40277001 @Matgarz)<br>
+Role: <br>
 - Jonathan Lebeau Lemieux (40251138 @BandoJo)<br>
+Role: Database Implementation and Management <br>
 - Karim Mikhaeil (40233685 @Karimikhaeil)<br>
+Role: <br>
 - Protip Nag (40308526 @Protip9)<br>
+Role: <br>
 - Tristan Ovesson (40113603 @RastaLink)<br>
+Role: <br>
 - Jasdeep Sandhu (40266557 @jasdeep-s-s)<br>
+Role: <br>
 
 # Language and Frameworks
 ## Languages Used:
