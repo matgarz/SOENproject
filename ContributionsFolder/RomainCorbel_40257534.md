@@ -7,12 +7,9 @@ Sept 18:
 I attended the second group meeting where the finalisation of the projects frameworks and languages was going to be used for the project. 
 I also began creating some user stories for the functionalities of the application (2 hours).
 
-Sept 22: 
-I attended the online meeting today were we continued to discuss the details of task delegations and member roles(30 minutes). 
-
 Sept 25: 
 I created a meetings minutes document and request a pull of a folder containing all meeting minutes for sprint 1(30 minutes). 
 At the lab tonight, the final details for sprint 1 will be finalised.
 
 Overall time spent on project so far: 
-20min + 20min*9days + 2hours + 0.5hour + 0.5hour = 6 hours and 20 minutes.
+20min + 20min*9days + 2hours + 0.5hour = 5 hours and 50 minutes.
