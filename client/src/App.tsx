@@ -43,7 +43,7 @@ function App() {
       </p>
 
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more, Testing to see
+        Click on the Vite and React logos to learn more
       </p>
     </>
   );
