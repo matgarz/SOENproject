@@ -22,11 +22,11 @@ This project is to be developed using Agile Development methods over four sprint
   - Admin Global Stats 
   
 # Team Members
-- Ariberto Bello Veras (40319600)<br>
+- Ariberto Bello Veras (40319600 @Aribertobello)<br>
 - Romain Corbel (40257534 @roma4in1)<br>
 - Mateo Garzon Velasco (40277001 @Matgarz)<br>
 - Jonathan Lebeau Lemieux (40251138 @BandoJo)<br>
-- Karim Mikhaeil (40233685 Karimikhaeil)<br>
+- Karim Mikhaeil (40233685 @Karimikhaeil)<br>
 - Protip Nag (40308526 @Protip9)<br>
 - Tristan Ovesson (40113603 @RastaLink)<br>
 - Jasdeep Sandhu (40266557 @jasdeep-s-s)<br>
