@@ -1,0 +1,182 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ============ USER MANAGEMENT ============
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String // hashed with bcrypt
+  name      String
+  studentId String?  @unique
+  role      Role     @default(STUDENT)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  tickets       Ticket[]
+  savedEvents   SavedEvent[]
+  eventsCreated Event[]      @relation("EventCreator")
+  reviews       Review[]
+
+  @@index([email])
+  @@index([role])
+}
+
+enum Role {
+  STUDENT
+  ORGANIZER
+  ADMIN
+}
+
+// ============ ORGANIZATIONS ============
+
+model Organization {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  description  String?  @db.Text
+  contactEmail String?
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Relations
+  events Event[]
+
+  @@index([isActive])
+}
+
+// ============ EVENTS ============
+
+model Event {
+  id          Int         @id @default(autoincrement())
+  title       String
+  description String      @db.Text
+  date        DateTime
+  location    String
+  capacity    Int // max tickets
+  ticketType  TicketType  @default(FREE)
+  ticketPrice Decimal?    @db.Decimal(10, 2)
+  category    String? // e.g., "Academic", "Social", "Sports"
+  imageUrl    String?
+  status      EventStatus @default(APPROVED)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  // Relations
+  organizationId Int
+  organization   Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  creatorId Int
+  creator   User @relation("EventCreator", fields: [creatorId], references: [id], onDelete: Cascade)
+
+  tickets Ticket[]
+  savedBy SavedEvent[]
+  reviews Review[]
+
+  @@index([organizationId])
+  @@index([creatorId])
+  @@index([date])
+  @@index([status])
+  @@index([category])
+}
+
+enum TicketType {
+  FREE
+  PAID
+}
+
+enum EventStatus {
+  PENDING // awaiting admin approval
+  APPROVED // live and visible
+  REJECTED // rejected by admin
+  CANCELLED // cancelled by organizer
+  COMPLETED // event has passed
+}
+
+// ============ TICKETS ============
+
+model Ticket {
+  id            Int           @id @default(autoincrement())
+  qrCode        String        @unique // unique QR code string
+  claimed       Boolean       @default(true)
+  checkedIn     Boolean       @default(false)
+  checkedInAt   DateTime?
+  paymentStatus PaymentStatus @default(FREE)
+  paymentAmount Decimal?      @db.Decimal(10, 2)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  // Relations
+  eventId Int
+  event   Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, eventId]) // one ticket per user per event
+  @@index([eventId, claimed])
+  @@index([userId])
+  @@index([qrCode])
+}
+
+enum PaymentStatus {
+  FREE
+  PENDING
+  COMPLETED
+  FAILED
+  REFUNDED
+}
+
+// ============ CALENDAR (SAVED EVENTS) ============
+
+model SavedEvent {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+
+  // Relations
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  eventId Int
+  event   Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, eventId]) // prevent duplicate saves
+  @@index([userId])
+  @@index([eventId])
+}
+
+// ============ REVIEWS (Additional Feature) ============
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  rating    Int // 1-5 stars
+  comment   String?  @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  eventId Int
+  event   Event @relation(fields: [eventId], references: [id], onDelete: Cascade)
+
+  userId Int
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, eventId]) // one review per user per event
+  @@index([eventId])
+  @@index([rating])
+}
