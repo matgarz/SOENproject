@@ -4,16 +4,16 @@ Express.js backend for the Campus Events platform with Prisma ORM and Azure MySQ
 
 ## Tech Stack
 
-- Runtime: Node.js v18+
-- Framework: Express.js v5
-- Database: Azure MySQL 8.0 (Cloud)
-- ORM: Prisma
-- Authentication: JWT + bcrypt
-- Language: TypeScript (ES Modules)
+- **Runtime:** Node.js v18+
+- **Framework:** Express.js v5
+- **Database:** Azure MySQL 8.0 (Cloud)
+- **ORM:** Prisma
+- **Authentication:** JWT + bcrypt
+- **Language:** TypeScript (ES Modules)
 
 ## Database Setup - Azure MySQL
 
-We use 'Azure Database for MySQL' for team collaboration. Everyone connects to the same cloud database.
+We use **Azure Database for MySQL** for team collaboration. Everyone connects to the same cloud database.
 
 ### Prerequisites
 
@@ -24,5 +24,5 @@ We use 'Azure Database for MySQL' for team collaboration. Everyone connects to t
 
 1. **Install dependencies:**
 ```bash
-cd server
+   cd server
    npm install
