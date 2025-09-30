@@ -24,3 +24,5 @@ We use 'Azure Database for MySQL' for team collaboration. Everyone connects to t
 
 1. **Install dependencies:**
 ```bash
+cd server
+   npm install
