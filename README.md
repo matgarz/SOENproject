@@ -49,8 +49,8 @@ Role: <br><br>
 ## Frameworks & Tools used:
 - React
 - Node.JS (Express.JS)
-- Postgresql
-- Supabase
+- MySQL + Prisma ORM
+- Azure Database
 
 ## For the User
   - You can be a student, organizer or administrator
