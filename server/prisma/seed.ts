@@ -1,3 +1,5 @@
+
+//Seed file creates example entities for the database
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcrypt';
 
@@ -17,7 +19,7 @@ async function main() {
   // Hash password for all users
   const hashedPassword = await bcrypt.hash('password123', 10);
 
-  // ============ CREATE USERS ============
+  //CREATE USERS
   const admin = await prisma.user.create({
     data: {
       email: 'admin@concordia.ca',
@@ -79,7 +81,7 @@ async function main() {
 
   console.log('Created 6 users (1 admin, 2 organizers, 3 students)');
 
-  // ============ CREATE ORGANIZATIONS ============
+  //CREATE ORGANIZATIONS
   const orgs = await Promise.all([
     prisma.organization.create({
       data: {
@@ -117,7 +119,7 @@ async function main() {
 
   console.log('Created 4 organizations');
 
-  // ============ CREATE EVENTS ============
+  //CREATE EVENTS
   const now = new Date();
   const tomorrow = new Date(now.getTime() + 24 * 60 * 60 * 1000);
   const nextWeek = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
@@ -199,7 +201,7 @@ async function main() {
 
   console.log('Created 5 events');
 
-  // ============ CREATE TICKETS ============
+  //CREATE TICKETS
   await Promise.all([
     prisma.ticket.create({
       data: {
@@ -236,7 +238,7 @@ async function main() {
 
   console.log('Created 3 sample tickets');
 
-  // ============ SAVE EVENTS ============
+  //SAVE EVENTS
   await Promise.all([
     prisma.savedEvent.create({
       data: {

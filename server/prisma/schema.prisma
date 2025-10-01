@@ -1,11 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-// prisma/schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// ============ USER MANAGEMENT ============
+//USER MANAGEMENT 
 
 model User {
   id        Int      @id @default(autoincrement())
@@ -43,7 +35,7 @@ enum Role {
   ADMIN
 }
 
-// ============ ORGANIZATIONS ============
+//ORGANIZATIONS
 
 model Organization {
   id           Int      @id @default(autoincrement())
@@ -60,7 +52,7 @@ model Organization {
   @@index([isActive])
 }
 
-// ============ EVENTS ============
+//EVENTS
 
 model Event {
   id          Int         @id @default(autoincrement())
@@ -108,7 +100,7 @@ enum EventStatus {
   COMPLETED // event has passed
 }
 
-// ============ TICKETS ============
+//TICKETS
 
 model Ticket {
   id            Int           @id @default(autoincrement())
@@ -142,7 +134,7 @@ enum PaymentStatus {
   REFUNDED
 }
 
-// ============ CALENDAR (SAVED EVENTS) ============
+//CALENDAR (SAVED EVENTS)
 
 model SavedEvent {
   id        Int      @id @default(autoincrement())
@@ -160,7 +152,7 @@ model SavedEvent {
   @@index([eventId])
 }
 
-// ============ REVIEWS (Additional Feature) ============
+//REVIEWS (Additional Feature [possible])
 
 model Review {
   id        Int      @id @default(autoincrement())
