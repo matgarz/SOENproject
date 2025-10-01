@@ -11,6 +11,7 @@
 
     // Module Resolution
     "moduleResolution": "nodenext",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "resolveJsonModule": true,
 

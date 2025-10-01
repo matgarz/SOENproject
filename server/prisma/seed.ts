@@ -1,4 +1,3 @@
-
 //Seed file creates example entities for the database
 import { PrismaClient } from '@prisma/client';
 import bcrypt from 'bcrypt';
