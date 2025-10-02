@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import eventRoutes from './routes/events.routes.js';
 
-dotenv.config();
+dotenv.config(); //to access the .env data without leaking passwords
 
 const app = express();
 const PORT = 3001;

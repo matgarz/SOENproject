@@ -1,6 +1,6 @@
 //Seed file creates example entities for the database
 import { PrismaClient } from '@prisma/client';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcrypt'; //to bycrpyt the passwords/ sensitive information
 
 const prisma = new PrismaClient();
 
@@ -58,6 +58,7 @@ async function main() {
         role: 'STUDENT',
       },
     }),
+
     prisma.user.create({
       data: {
         email: 'student2@concordia.ca',
@@ -67,6 +68,7 @@ async function main() {
         role: 'STUDENT',
       },
     }),
+
     prisma.user.create({
       data: {
         email: 'student3@concordia.ca',
@@ -90,6 +92,7 @@ async function main() {
         isActive: true,
       },
     }),
+
     prisma.organization.create({
       data: {
         name: 'Concordia Student Union',
@@ -98,6 +101,7 @@ async function main() {
         isActive: true,
       },
     }),
+
     prisma.organization.create({
       data: {
         name: 'Athletics Department',
@@ -106,6 +110,7 @@ async function main() {
         isActive: true,
       },
     }),
+
     prisma.organization.create({
       data: {
         name: 'Engineering Society',
@@ -264,7 +269,7 @@ async function main() {
 
 main()
   .catch((e) => {
-    console.error('❌ Seed failed:', e);
+    console.error('Seed failed:', e);
     process.exit(1);
   })
   .finally(async () => {

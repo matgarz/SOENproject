@@ -1,3 +1,4 @@
+//All current Imports required
 import { Router } from 'express';
 import type { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
@@ -5,13 +6,17 @@ import { PrismaClient } from '@prisma/client';
 const router = Router();
 const prisma = new PrismaClient();
 
-// GET /api/events=Get all upcoming events
+//These GET comments describe what GET page they are requesting from
+
+// GET /api/events = Get all upcoming events
+
 router.get('/', async (req: Request, res: Response) => {
   try {
+
     const events = await prisma.event.findMany({
       where: { 
         status: 'APPROVED',
-        date: { gte: new Date() } // Only upcoming events
+        date: { gte: new Date() } // Only upcoming events are sorted
       },
       include: {
         organization: true,
@@ -26,15 +31,17 @@ router.get('/', async (req: Request, res: Response) => {
     });
 
     res.json(events);
-  } catch (error) {
+    
+  } catch (error) {             // catching errors
     console.error('Error fetching events:', error);
     res.status(500).json({ error: 'Failed to fetch events' });
   }
 });
 
-// GET /api/events/:id=Get single event by ID
+// GET /api/events/:id = Get single event by ID
 router.get('/:id', async (req: Request, res: Response) => {
   try {
+
     const event = await prisma.event.findUnique({
       where: { id: parseInt(req.params.id) },
       include: {
@@ -53,7 +60,7 @@ router.get('/:id', async (req: Request, res: Response) => {
     }
 
     res.json(event);
-  } catch (error) {
+  } catch (error) {         // catching errors
     console.error('Error fetching event:', error);
     res.status(500).json({ error: 'Failed to fetch event' });
   }

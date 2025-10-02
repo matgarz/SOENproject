@@ -1,18 +1,20 @@
+//This is where you can update the schema for the database them run the command 'npx prisma migrate dev'
+//to update the actual migration.sql
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = env("DATABASE_URL") //the Database link inside our safe .env file
 }
 
-//USER MANAGEMENT 
+//USER MANAGEMENT (1)
 
 model User {
   id        Int      @id @default(autoincrement())
   email     String   @unique
-  password  String // hashed with bcrypt
+  password  String // hashed with bcrypt for safety
   name      String
   studentId String?  @unique
   role      Role     @default(STUDENT)
@@ -35,7 +37,7 @@ enum Role {
   ADMIN
 }
 
-//ORGANIZATIONS
+//ORGANIZATIONS (2)
 
 model Organization {
   id           Int      @id @default(autoincrement())
@@ -52,7 +54,7 @@ model Organization {
   @@index([isActive])
 }
 
-//EVENTS
+//EVENTS (3)
 
 model Event {
   id          Int         @id @default(autoincrement())
@@ -100,7 +102,7 @@ enum EventStatus {
   COMPLETED // event has passed
 }
 
-//TICKETS
+//TICKETS (4)
 
 model Ticket {
   id            Int           @id @default(autoincrement())
@@ -134,7 +136,7 @@ enum PaymentStatus {
   REFUNDED
 }
 
-//CALENDAR (SAVED EVENTS)
+//CALENDAR (SAVED EVENTS) (5)
 
 model SavedEvent {
   id        Int      @id @default(autoincrement())
@@ -152,7 +154,7 @@ model SavedEvent {
   @@index([eventId])
 }
 
-//REVIEWS (Additional Feature [possible])
+//REVIEWS (Additional Feature [possible]) (6)
 
 model Review {
   id        Int      @id @default(autoincrement())
