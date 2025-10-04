@@ -48,6 +48,7 @@ Role: <br><br>
 
 ## Frameworks & Tools used:
 - React
+- Tailwind CSS
 - Node.JS (Express.JS)
 - MySQL + Prisma ORM
 - Azure Database
